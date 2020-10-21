@@ -15,11 +15,11 @@ public class Demo{
         System.out.println();
         System.out.println(arrayDeepToString(test).replace("}, ","},\n "));
         System.out.println();
-        System.out.println(arrayDeepToString(create2dArray(4,4,4)).replace("}, ","},\n "));
+        System.out.println(arrayDeepToString(create2DArray(4,4,4)).replace("}, ","},\n "));
         System.out.println();
-        System.out.println(arrayDeepToString(create2dArrayRandomized(4,10,100)).replace("}, ","},\n "));
+        System.out.println(arrayDeepToString(create2DArrayRandomized(4,10,100)).replace("}, ","},\n "));
     }
-    public static int[][] create2dArray(int rows, int cols, int maxValue){
+    public static int[][] create2DArray(int rows, int cols, int maxValue){
         int[][] arr = new int[rows][cols];
         for(int i=0;i<rows;i++){
             for(int j=0;j<cols;j++){
@@ -28,7 +28,7 @@ public class Demo{
         }
         return arr;
     }
-    public static int[][] create2dArrayRandomized(int rows,int cols,int maxValue){
+    public static int[][] create2DArrayRandomized(int rows,int cols,int maxValue){
         int[][] arr = new int[rows][];
         for(int i=0;i<rows;i++){
             int temp = (int)Math.floor(Math.random()*(cols+1));
