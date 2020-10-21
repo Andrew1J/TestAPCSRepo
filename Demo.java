@@ -12,13 +12,28 @@ public class Demo{
         test[3] = d;
         test[4] = e;
         System.out.println(arrToString(a));
+        System.out.println();
         System.out.println(arrDeepToString(test).replace("}, ","},\n "));
-        System.out.println(arrDeepToString(create2dArray(4,4,4)));
+        System.out.println();
+        System.out.println(arrDeepToString(create2dArray(4,4,4)).replace("}, ","},\n "));
+        System.out.println();
+        System.out.println(arrDeepToString(create2dArrayRandomized(4,10,100)).replace("}, ","},\n "));
     }
     public static int[][] create2dArray(int rows, int cols, int maxValue){
         int[][] arr = new int[rows][cols];
         for(int i=0;i<rows;i++){
             for(int j=0;j<cols;j++){
+                arr[i][j] = (int)Math.floor(Math.random()*(maxValue+1));
+            }
+        }
+        return arr;
+    }
+    public static int[][] create2dArrayRandomized(int rows,int cols,int maxValue){
+        int[][] arr = new int[rows][];
+        for(int i=0;i<rows;i++){
+            int temp = (int)Math.floor(Math.random()*(cols+1));
+            arr[i] = new int[temp];
+            for(int j=0;j<temp;j++){
                 arr[i][j] = (int)Math.floor(Math.random()*(maxValue+1));
             }
         }
