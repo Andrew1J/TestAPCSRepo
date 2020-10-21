@@ -13,11 +13,11 @@ public class Demo{
         test[4] = e;
         System.out.println(arrToString(a));
         System.out.println();
-        System.out.println(arrDeepToString(test).replace("}, ","},\n "));
+        System.out.println(arrayDeepToString(test).replace("}, ","},\n "));
         System.out.println();
-        System.out.println(arrDeepToString(create2dArray(4,4,4)).replace("}, ","},\n "));
+        System.out.println(arrayDeepToString(create2dArray(4,4,4)).replace("}, ","},\n "));
         System.out.println();
-        System.out.println(arrDeepToString(create2dArrayRandomized(4,10,100)).replace("}, ","},\n "));
+        System.out.println(arrayDeepToString(create2dArrayRandomized(4,10,100)).replace("}, ","},\n "));
     }
     public static int[][] create2dArray(int rows, int cols, int maxValue){
         int[][] arr = new int[rows][cols];
@@ -59,7 +59,7 @@ public class Demo{
         string += "}";
         return string;
     }
-    public static String arrDeepToString(int[][] arr){
+    public static String arrayDeepToString(int[][] arr){
         String string = "{";
         for(int i=0;i<arr.length;i++){
             string += arrToString(arr[i]);
