@@ -1,6 +1,11 @@
 public class Demo{
     public static void main(String args[]){
-        int[] a = {1};
+        if(args.length==0){
+            printLoop(5);
+        } else {
+            printLoop(Integer.parseInt(args[0]));
+        }
+        /*int[] a = {1};
         int[] b = {1,2};
         int[] c = {1,2,3};
         int[] d = {1,2,3,4};
@@ -18,6 +23,7 @@ public class Demo{
         System.out.println(arrayDeepToString(create2DArray(4,4,4)).replace("}, ","},\n "));
         System.out.println();
         System.out.println(arrayDeepToString(create2DArrayRandomized(4,10,100)).replace("}, ","},\n "));
+        */
     }
     public static int[][] create2DArray(int rows, int cols, int maxValue){
         int[][] arr = new int[rows][cols];
